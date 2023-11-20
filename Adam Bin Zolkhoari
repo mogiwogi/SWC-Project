@@ -1,0 +1,17 @@
+// Function to display student records
+void displayStudentRecords(int numStudents, double averageScore) {
+    cout << "\nStudent Records:\n";
+    cout << "--------------------------------------------------\n";
+    cout << "|ID|\t|Name|\t\t|Attendance|\t|Scores|\n";
+    cout << "--------------------------------------------------\n";
+
+    for (int i = 0; i < numStudents; ++i) {
+        // Display information for each student
+        cout << studentID[i] << "\t" << studentName[i] << "\t\t" << attendance[i]
+                  << "\t\t" << scores[i] << "\n\n";
+    }
+
+    cout << "--------------------------------------------------\n";
+    cout << "Average Scores is : " << averageScore << "\t"
+              << "\n";
+}
