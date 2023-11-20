@@ -1,0 +1,33 @@
+int main() {
+    int numStudents;
+
+    do {
+        // Get the number of students from the user
+        cout << "Enter the number of students: ";
+        cin >> numStudents;
+
+        // Checking if the input is valid
+        if (numStudents > MAX_STUDENTS) {
+            // Display an error if the number of students is over the maximum limit
+            cout << "Error! Number of students exceeds the maximum limit.\nPlease enter again.\n";
+        } else if (numStudents <= 0) {
+            // Display an error if the number of students is lesser than 0
+            cout << "Error! Number of students must be greater than 0.\nPlease enter again.\n";
+        } else {
+            break;
+            // Break out of the loop if the input is valid
+        }
+
+    } while (true);
+
+	inputStudentData(numStudents);
+
+    double averageScore = calculateAverageScores(numStudents);
+
+    displayStudentRecords(numStudents, averageScore);
+
+    //Function to display pass/fail status
+    displayPassFailStatus(numStudents);
+
+    return 0;
+}
