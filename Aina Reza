@@ -1,0 +1,17 @@
+// Function to input data for each student
+void inputStudentData(int numStudents) {
+    for (int i = 0; i < numStudents; i++) {
+        // Ask for the user input for details of each student
+        cout << "\nEnter the details of student " << i + 1<< ":\n";
+        cout << "-------------------------------\n";
+        cout << "Student ID: ";
+        cin >> studentID[i];
+        cin.ignore();  // Clear the newline character from the buffer
+        cout << "Student Name: ";
+        getline(cin, studentName[i]);
+        cout << "Scores(%): ";
+        cin >> scores[i];
+        cout << "Attendance(%): ";
+        cin >> attendance[i];
+    }
+}
