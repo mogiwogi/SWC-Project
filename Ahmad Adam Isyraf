@@ -1,0 +1,22 @@
+// Functions to check and display pass/fail status for each student
+void displayPassFailStatus(int numStudents) {
+    if (numStudents == 0) {
+        cout << "\nNo student records available.\n";
+        return;
+    }
+
+    // Passing score defined early on
+    const double passingScore = 30.0;
+
+    cout << "\nPassing grade : 30 \n";
+    cout << "-------------------------------\n";
+    cout << "ID\tName\t\tStatus\n";
+    cout << "-------------------------------\n";
+
+    for (int i = 0; i < numStudents; ++i) {
+        string status = (scores[i] >= passingScore) ? "Pass" : "Fail";
+        cout << studentID[i] << "\t" << studentName[i] << "\t\t" << status << "\n";
+    }
+
+    cout << "-------------------------------\n";
+}
