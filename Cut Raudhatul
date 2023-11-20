@@ -1,0 +1,27 @@
+// Functions to calculate and return the average of all student scores
+double calculateAverageScores(int numStudents) {
+    double totalScores = 0;
+    double totalAttendance = 0;
+
+    for (int i = 0; i < numStudents; i++) {
+        totalScores += scores[i];
+        totalAttendance += attendance[i];
+    }
+
+    double averageScore;
+    double averageAttendance;
+
+    if (numStudents == 0) {
+        // If there are no students, set averages to 0
+        averageScore = 0;
+        averageAttendance = 0;
+    } else {
+        // Calculate averages based on total scores and attendance
+        averageScore = totalScores / numStudents;
+        averageAttendance = totalAttendance / numStudents;
+    }
+
+    cout << "Average Attendance is: " << averageAttendance << "\n";
+
+    return averageScore;
+}
